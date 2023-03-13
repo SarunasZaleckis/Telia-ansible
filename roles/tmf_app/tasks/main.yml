@@ -1,0 +1,9 @@
+---
+- name: Pull App from GitHub
+  ansible.builtin.git:
+    repo: https://github.com/SarunasZaleckis/Telia-app.git
+    dest: /var/app
+
+- name: Install requirements
+  ansible.builtin.pip:
+    requirements: /var/app/Telia-app/requirements.txt
